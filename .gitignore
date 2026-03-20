@@ -1,0 +1,37 @@
+# Backend (Java/Spring Boot)
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+backend/.idea/
+backend/*.iml
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/bin/
+
+# Frontend (React/Node)
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.vite/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Sensitive files
+*.env
+*.properties
+application-prod.properties

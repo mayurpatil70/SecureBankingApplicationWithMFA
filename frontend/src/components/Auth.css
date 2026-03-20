@@ -1,0 +1,271 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px;
+  padding: 40px;
+  animation: slideUp 0.4s ease-out;
+}
+
+.register-card {
+  max-width: 600px;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.auth-header h1 {
+  font-size: 32px;
+  color: #667eea;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.auth-header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.form-group input {
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  border-left: 4px solid #c33;
+}
+
+.auth-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.auth-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.auth-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.auth-footer p {
+  color: #666;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-card {
+    padding: 30px 20px;
+  }
+}
+
+.success-message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 14px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  border-left: 4px solid #22c55e;
+  margin-bottom: 20px;
+  animation: slideDown 0.4s;
+}
+
+.dev-info {
+  margin-top: 16px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #22c55e;
+}
+
+.dev-info p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.reset-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.reset-link:hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mfa-prompt {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #f0f4ff;
+  border-radius: 10px;
+}
+
+.mfa-prompt p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.mfa-subtitle {
+  margin-top: 8px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #666 !important;
+}
+
+.mfa-code-input {
+  text-align: center;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  letter-spacing: 8px !important;
+  font-family: monospace !important;
+}
+
+.back-button {
+  width: 100%;
+  padding: 14px;
+  background: #f5f5f5;
+  color: #666;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #e0e0e0;
+}
+/*
+```
+
+4. **Save**
+
+---
+
+## ✅ **BATCH 2 COMPLETE!**
+```
+✅ Login.jsx - Created
+✅ Register.jsx - Created
+✅ Auth.css - Created
+
+Total: 9 files created!
+
+Next: Dashboard and Transfer components */
