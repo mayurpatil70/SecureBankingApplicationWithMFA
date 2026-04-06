@@ -83,22 +83,3 @@ public class SecurityConfig {
         return source;
     }
 }
-/*  
-```
-
----
-
-## ✅ **BATCH 2.1 DONE!**
-
-**Save all files** (`Ctrl+S` on each).
-
----
-
-## 📊 **Progress Update:**
-```
-✅ BATCH 1: Models, Repositories, DTOs (12 files) - DONE
-✅ BATCH 2.1: Security & JWT (4 files) - DONE
-
-Total: 16 files created!
-
-Next: Service layer (Business logic) */

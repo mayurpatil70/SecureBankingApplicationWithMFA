@@ -89,21 +89,3 @@ public class Transaction {
         }
     }
 }
-/* 
-```
-
----
-
-## ✅ **BATCH 1.1 DONE!**
-
-You've created the 3 main entity classes. **Save all files** (`Ctrl+S` on each).
-
----
-
-## 📊 **Progress Check:**
-```
-✅ User.java - Created
-✅ Account.java - Created  
-✅ Transaction.java - Created
-
-Next: Repository layer */

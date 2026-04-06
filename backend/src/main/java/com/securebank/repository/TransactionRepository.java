@@ -13,7 +13,7 @@ import java.util.Optional;
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
     
-    List<Transaction> findBySourceAccountIdOrDestinationAccountIdOrderByCreatedAtDesc(
+    List<Transaction> findBySourceAccount_IdOrDestinationAccount_IdOrderByCreatedAtDesc(
         Long sourceId, Long destId
     );
     

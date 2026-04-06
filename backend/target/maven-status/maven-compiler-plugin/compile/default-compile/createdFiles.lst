@@ -4,6 +4,7 @@ com\securebank\service\AccountService.class
 com\securebank\controller\UserController.class
 com\securebank\controller\PasswordResetController.class
 com\securebank\dto\AccountRequest.class
+com\securebank\model\Role.class
 com\securebank\model\PasswordResetToken.class
 com\securebank\repository\PasswordResetTokenRepository.class
 com\securebank\repository\AccountRepository.class
@@ -12,6 +13,7 @@ com\securebank\dto\MfaResponse.class
 com\securebank\security\JwtUtil.class
 com\securebank\service\MfaService.class
 com\securebank\service\UserService.class
+com\securebank\repository\RoleRepository.class
 com\securebank\service\PdfService.class
 com\securebank\controller\MfaController.class
 com\securebank\service\PasswordResetService.class

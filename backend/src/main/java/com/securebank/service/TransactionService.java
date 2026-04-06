@@ -117,8 +117,8 @@ public class TransactionService {
             throw new RuntimeException("Unauthorized: You don't own this account");
         }
 
-        return transactionRepository.findBySourceAccountIdOrDestinationAccountIdOrderByCreatedAtDesc(
-                account.getId(), account.getId()
+       return transactionRepository.findBySourceAccount_IdOrDestinationAccount_IdOrderByCreatedAtDesc(
+        account.getId(), account.getId()
         );
     }
 
@@ -166,23 +166,3 @@ public class TransactionService {
     );
 }
 }
-/* 
-```
-
----
-
-## ✅ **BATCH 3 DONE!**
-
-**Save all files** (`Ctrl+S` on each).
-
----
-
-## 📊 **Progress Update:**
-```
-✅ BATCH 1: Models, Repositories, DTOs (12 files) - DONE
-✅ BATCH 2: Security & JWT (4 files) - DONE
-✅ BATCH 3: Services (3 files) - DONE
-
-Total: 19 files created!
-
-Next: Controllers (REST API endpoints) */

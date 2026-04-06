@@ -1,15 +1,19 @@
 package com.securebank.service;
 
+import java.util.Set;
 import com.securebank.dto.ChangePasswordRequest;
 import com.securebank.dto.ProfileRequest;
+import com.securebank.dto.RegisterRequest;
 import com.securebank.model.User;
 import com.securebank.repository.UserRepository;
+import com.securebank.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.securebank.dto.MfaResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+
 
 @Service
 public class UserService {
@@ -23,10 +27,28 @@ public class UserService {
     @Autowired
     private MfaService mfaService;
 
+    @Autowired
+    private RoleRepository roleRepository;
+
     public User getUserProfile(Long userId) {
         return userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User not found"));
+                
     }
+
+    @Transactional
+    // UserService.java or AuthService.java
+    public User registerUser(RegisterRequest request) {
+    User user = new User();
+    user.setEmail(request.getEmail());
+    user.setPassword(passwordEncoder.encode(request.getPassword()));
+
+    // ✅ Make sure this line EXISTS
+    user.setRoles(Set.of(roleRepository.findByName("ROLE_USER")
+        .orElseThrow(() -> new RuntimeException("Role not found"))));
+
+    return userRepository.save(user);
+}
 
     @Transactional
     public User updateProfile(Long userId, ProfileRequest request) {
